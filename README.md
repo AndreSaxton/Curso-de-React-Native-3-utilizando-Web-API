@@ -1,6 +1,7 @@
 # Curso-de-React-Native-4--utilizando-Web-API
 
 Preparando Ambiente.
+
 1 - Instalar node lts (https://nodejs.org/en/).
 2 - Instalar json-server para criar Fake API.
   - A Fake API irá simular uma API para não dependermos de terceiros durante o andamento do curso.
