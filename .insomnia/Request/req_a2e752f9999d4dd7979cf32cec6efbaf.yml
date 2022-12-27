@@ -1,0 +1,33 @@
+_id: req_a2e752f9999d4dd7979cf32cec6efbaf
+type: Request
+parentId: wrk_63afa3feff4c4a9bb9d06f88656fe81a
+modified: 1672101310782
+created: 1672101225206
+url: http://localhost:3000/users
+name: user
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"login": "usuario teste",
+    	"avatar_url": "https://avatars.githubusercontent.com/u/54721131?v=4",
+    	"name": "teste",
+    	"email": "teste@email.com",
+    	"followers": 43,
+    	"following": 54
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1672101225206
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

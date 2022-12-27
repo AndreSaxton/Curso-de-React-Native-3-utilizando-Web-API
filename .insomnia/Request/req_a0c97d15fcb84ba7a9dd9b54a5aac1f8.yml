@@ -1,0 +1,21 @@
+_id: req_a0c97d15fcb84ba7a9dd9b54a5aac1f8
+type: Request
+parentId: wrk_63afa3feff4c4a9bb9d06f88656fe81a
+modified: 1672101498363
+created: 1672101467686
+url: http://localhost:3000/users/3
+name: deletar usuario
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1672101467686
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
