@@ -15,3 +15,6 @@ Preparando Ambiente.
   - Para iniciar o servidor execute json-server --watch db.json.
   - Fonte https://github.com/typicode/json-server#getting-started.
 5 - Para saber se funcionou acesse http://localhost:3000/posts e veja se aparece o JSON.
+
+6 - Importar o projeto base de https://github.com/alura-cursos/react-native-ficando-online/tree/projeto-base.
+
