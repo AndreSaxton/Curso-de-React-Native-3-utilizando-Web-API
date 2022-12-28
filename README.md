@@ -18,3 +18,5 @@ Preparando Ambiente.
 
 6 - Importar o projeto base de https://github.com/alura-cursos/react-native-ficando-online/tree/projeto-base.
 
+7 - Instalar pacotes com 'npm start'
+8 - Iniciar o Expo usando 'expo start'
