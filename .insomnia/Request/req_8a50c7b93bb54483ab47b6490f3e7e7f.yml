@@ -1,0 +1,33 @@
+_id: req_8a50c7b93bb54483ab47b6490f3e7e7f
+type: Request
+parentId: wrk_63afa3feff4c4a9bb9d06f88656fe81a
+modified: 1672101442510
+created: 1672101388880
+url: http://localhost:3000/users/3
+name: atualizar usuário
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"login": "usuario teste",
+    	"avatar_url": "https://avatars.githubusercontent.com/u/54721131?v=4",
+    	"name": "ANDRE TESTE",
+    	"email": "teste@email.com",
+    	"followers": 43,
+    	"following": 54
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1672100936627.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
