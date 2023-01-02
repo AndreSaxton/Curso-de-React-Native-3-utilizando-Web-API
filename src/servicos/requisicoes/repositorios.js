@@ -28,3 +28,15 @@ export async function salvarRepositoriosDoUsuario(postId, nome, data, id){
         return 'erro'
     }
 }
+
+export async function buscaRepositorio(nomeRepositorio){
+    try{
+        const resultado = await api.get(`/repos?name=${nomeRepositorio}`);
+        
+        return resultado.data;
+    }
+    catch(error){
+        console.log(error);
+        return{}
+    }
+}

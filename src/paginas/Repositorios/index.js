@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, FlatList, TouchableOpacity } from 'react-native';
+import { Text, View, FlatList, TextInput, TouchableOpacity } from 'react-native';
 import estilos from './estilos';
-import { pegarRepositoriosDoUsuario } from '../../servicos/requisicoes/repositorios';
+import { buscaRepositorio, pegarRepositoriosDoUsuario } from '../../servicos/requisicoes/repositorios';
 import { useIsFocused } from '@react-navigation/native';
 
 export default function Repositorios({ route, navigation }) {
@@ -13,6 +13,25 @@ export default function Repositorios({ route, navigation }) {
         setRepo(resultado)
     },[estaNaTela])
 
+    const [nomeRepositorio, setNomeRepositorio] = useState('');
+
+    async function busca(){
+        const resultado = await buscaRepositorio(nomeRepositorio);
+        setNomeRepositorio('')
+
+        if(resultado){
+            setRepo(resultado)
+        }
+        else{
+            // Alerta para mobile
+            Alert.alert('Falha na busca', 'Repositório não encontrado')
+            //necessário poís o Chrome não exive o Alert.alert
+            alert('Repositório não encontrado')
+
+            setRepo({})
+        }
+    }
+
     return (
         <View style={estilos.container}>
                 <Text style={estilos.repositoriosTexto}>{repo.length} repositórios criados</Text>
@@ -21,6 +40,19 @@ export default function Repositorios({ route, navigation }) {
                     onPress={() => navigation.navigate('CriarRepositorio')}
                 >
                     <Text style={estilos.textoBotao}>Adicionar novo repositório</Text>
+                </TouchableOpacity>
+
+                <TextInput
+                    placeholder="Busque por um repositório"
+                    autoCapitalize="none"
+                    style={estilos.entrada}
+                    value={nomeRepositorio}
+                    onChangeText={setNomeRepositorio}
+                />
+                <TouchableOpacity style={estilos.botao} onPress={busca} >
+                    <Text style={estilos.textoBotao}>
+                        Buscar
+                    </Text>
                 </TouchableOpacity>
 
                 <FlatList
