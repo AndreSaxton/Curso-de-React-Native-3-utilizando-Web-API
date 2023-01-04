@@ -9,7 +9,11 @@ export default function Repositorios({ route, navigation }) {
     const estaNaTela = useIsFocused();
 
     useEffect( async () => {
-        const resultado = await pegarRepositoriosDoUsuario(route.params.id)
+        // Quando estiver usando Fake API
+        // const resultado = await pegarRepositoriosDoUsuario(route.params.id)
+
+        // Quando estiver usando API do GitHub
+        const resultado = await pegarRepositoriosDoUsuario(route.params.nomeUsuario)
         setRepo(resultado)
     },[estaNaTela])
 

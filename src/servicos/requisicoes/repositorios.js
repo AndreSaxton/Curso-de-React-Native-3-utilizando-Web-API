@@ -1,9 +1,14 @@
 import api from "../api";
 
-export async function pegarRepositoriosDoUsuario(id){
+// export async function pegarRepositoriosDoUsuario(id){
+export async function pegarRepositoriosDoUsuario(nomeUsuario){
     try{
-        const resultado = await api.get(`/repos?postId=${id}`);
-        
+        // Quando estiver usando Fake API
+        // const resultado = await api.get(`/repos?postId=${id}`);
+
+        // Quando estiver usando API do GitHub
+        const resultado = await api.get(`/users/${nomeUsuario}/repos`);
+
         return resultado.data;
     }
     catch(error){
